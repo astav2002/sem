@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #m1 {
+            margin: 0;
+            padding: 0;
+            background: url(back.jpg);
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        .sun {
+            content: url(sun.png);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: -1px -9px 299px 30px rgba(255, 109, 44, 0.75);
+            -webkit-box-shadow: -1px -9px 299px 30px rgba(255, 109, 44, 0.75);
+            -moz-box-shadow: -1px -9px 299px 30px rgba(255, 109, 44, 0.75);
+
+        }
+
+        .earth {
+            position: absolute;
+            top: calc(50% - 1px);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 2px;
+            transform-origin: left;
+            animation: rotate 10s linear infinite;
+        }
+
+        .earth:before {
+            content: url(earth.png);
+            position: absolute;
+            top: -25px;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: -1px 1px 98px 56px rgba(67, 147, 245, 0.75);
+            -webkit-box-shadow: -1px 1px 98px 56px rgba(67, 147, 245, 0.75);
+            -moz-box-shadow: -1px 1px 98px 56px rgba(67, 147, 245, 0.75);
+            animation: rotate 10s linear infinite;
+        }
+
+        .moon {
+            position: absolute;
+            right: 25px;
+            width: 60px;
+            height: 1px;
+            transform-origin: right;
+            animation: rotate 3s linear infinite;
+        }
+
+        .moon:before {
+            content: url(moon.png);
+            position: absolute;
+            top: -10%;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            box-shadow: -1px 2px 29px -7px rgba(110, 204, 227, 0.75);
+            -webkit-box-shadow: -1px 2px 29px -7px rgba(110, 204, 227, 0.75);
+            -moz-box-shadow: -1px 2px 29px -7px rgba(110, 204, 227, 0.75);
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <body id="m1">
+        <div class="center">
+            <div class="sun"></div>
+            <div class="earth">
+                <div class="moon">
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
